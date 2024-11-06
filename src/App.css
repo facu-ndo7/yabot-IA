@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+/* ESTILOS DE MI APLICACIÓN */
+
+/* HEADER  */
+
+.encabezado{
+    border: solid black 2px;
+    height: 15vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.encabezado_titulo{
+    text-align: center;
+    font-size: 290%;
+    padding-top: 1%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* MENU  */
+
+.menu_opcion{
+    border: solid black 1px;
+    width: 33vw;
+    height: 10vh;
+    transition: 0.3s;
+    margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu_opcion--titulo{
+    text-align: center;
+    padding-top: 4%;
+    transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.menu_opcion:hover{
+    background-color: rgb(0, 136, 255);
+    width: 34vw;
+    height: 12vh;
+
+    .menu_opcion--titulo{
+        color: white;
+        font-size: 140%;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* VENTANA DERECHA  */
+
+.contenedor_opcion{
+    position: absolute;
+    top: 17.1%;
+    margin-left: 34.6%;
+    border: outset black 2px;
+    width: 64.9vw;
+    height: 67vh;
+}
+
+/* REGISTRAR ALUMNO  */
+
+.contenedor_formulario{
+    margin-top: 2%;
+}
+
+.contenedor_formulario--seccion{
+    text-align: center;
+}
+
+.contenedor_formulario--input{
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 100%;
+}
+
+.boton_enviarDatos{
+    font-size: 130%;
+    width: 25vw;
+    margin-top: 10%;
+    margin-left: 35%;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.boton_enviarDatos:hover{
+    background-color: rgb(0, 234, 255);
+}
+
+/* REDACTAR  */
+
+.cursos{
+    border: solid black 1px;
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 6vw;
+    text-align: center;
+}
+
+.notita{
+    font-size: 130%;
+    display: block;
+    margin-left: 15%;
+    resize: none;
+}
+
+.boton_enviarNotita{
+    width: 15vw;
+    margin-top: 2%;
+    margin-left: 70%;
+    font-size: 110%;
+}
+
+.boton_enviarNotita:hover{
+    background-color: rgb(0, 234, 255);
+}
+
+/* INASISTENCIA/NOTAS  */
+
+.elegir_IN{
+    border: solid black 1px;
+    display: inline-block;
+    margin-left: 1%;
+    width: 12vw;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.elegir_IN:hover{
+    width: 13vw;
+    font-size: 120%;
+}
+
+.seleccionar_alumno{
+    margin-left: 34%;
+    margin-top: 1%;
+    font-size: 103%;
+}
+
+/* CONFIGURACIONES  */
+
+.opcion_configuracion{
+    border: solid 2px black;
+    width: 10vw;
+    font-size: 120%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.opcion_configuracion--titulo{
+    text-align: center;
+}
+
+.contenedor_opcionElegida{
+    display: none;
+    background-color: orange;
+    width: 50vw;
+    height: 25vh;
+    margin-left: 2%;
 }

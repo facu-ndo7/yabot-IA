@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+/* MONTAJE DE LA APLICACIÓN */
+
+/* importo las librerias y componentes que necesito */
+import React from "react";
+import { Route, Routes} from "react-router-dom"; 
+
+import Menu from './Componentes/Menu';
+import Configuracion from './Componentes/Configuracion';
+import Alumno from "./Componentes/RegistrarAlumno";
+import IN from './Componentes/InasistenciaNotas';
+import Notita from './Componentes/Redactar';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/* estructura de mi aplicación */
 
-export default App;
+const App = () => {
+    return (
+        <>
+            <header className="encabezado">
+                <h1 className="encabezado_titulo">YABOT-IA</h1>
+            </header>
+            <Menu /> {/* renderizo mi componente 'Menu' */}
+            <Routes>
+                <Route path="/configuracion" element={<Configuracion />} />
+                <Route path="/registraralumno" element={<Alumno />} />
+                <Route path="/inasistencianotas" element={<IN />} />
+                <Route path="/redactar" element={<Notita />} />
+            </Routes>
+        </>
+    );
+};
+
+export default App; /* exporto mi aplicación */
